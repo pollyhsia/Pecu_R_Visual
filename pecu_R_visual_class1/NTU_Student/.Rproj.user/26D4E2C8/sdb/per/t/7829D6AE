@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"NTU_Student_1945-2005\"\nauthor: \"pollyhsia\"\ndate: \"2017年3月1日\"\noutput: html_document\n---\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\n```\n\n## 資料介紹\n台大大學部各系1945~2005學生人數變化\n資料來源：台大主計處-- http://acct2015.cc.ntu.edu.tw/\n```{r}\nlibrary(png)            #可以按tab鍵讓你install的東西叫出來\nlibrary(animation)\nrawData = read.csv('NTU_Student.csv', header = T)\nallLine = nrow(rawData)  #如果不知道有幾個rows，用13~14行的方法\nrawData = rawData[-allLine,]\nfor(yid in c(1:nrow(rawData))){\n  barplot(as.matrix(rawData[yid,c(-1,-2)]),\n          main = paste0(\"國立台灣大學\", rawData[yid,1],\n                        \"年大學部總計\", rawData[yid,2],\"人\"))\n}\n```\n\n",
+    "created" : 1488337950171.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2417314109",
+    "id" : "7829D6AE",
+    "lastKnownWriteTime" : 1488338313,
+    "last_content_update" : 1488338313434,
+    "path" : "D:/R/pecu_R/pecu_R_visual_class1/NTU_Student/NTU_Student_1945-2005.Rmd",
+    "project_path" : "NTU_Student_1945-2005.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

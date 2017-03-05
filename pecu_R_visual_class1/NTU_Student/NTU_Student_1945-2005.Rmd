@@ -1,0 +1,27 @@
+---
+title: "NTU_Student_1945-2005"
+author: "pollyhsia"
+date: "2017年3月1日"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 資料介紹
+台大大學部各系1945~2005學生人數變化
+資料來源：台大主計處-- http://acct2015.cc.ntu.edu.tw/
+```{r}
+library(png)            #可以按tab鍵讓你install的東西叫出來
+library(animation)
+rawData = read.csv('NTU_Student.csv', header = T)
+allLine = nrow(rawData)  #如果不知道有幾個rows，用13~14行的方法
+rawData = rawData[-allLine,]
+for(yid in c(1:nrow(rawData))){
+  barplot(as.matrix(rawData[yid,c(-1,-2)]),
+          main = paste0("國立台灣大學", rawData[yid,1],
+                        "年大學部總計", rawData[yid,2],"人"))
+}
+```
+
