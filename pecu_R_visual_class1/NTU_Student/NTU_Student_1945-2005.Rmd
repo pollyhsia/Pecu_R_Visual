@@ -26,4 +26,4 @@ for(yid in c(1:nrow(rawData))){
 ```
 
 <img src='https://pollyhsia.github.io/Pecu_R_Visual/pecu_R_visual_class1/NTU_Student/students.gif'>
-<iframe src='https://pollyhsia.github.io/Pecu_R_Visual/pecu_R_visual_class1/NTU_Student/test.html' height=800, width=600></iframe>
+<iframe width="560" height="315" src="https://pollyhsia.github.io/Pecu_R_Visual/pecu_R_visual_class1/NTU_Student/test.html" frameborder="0" allowfullscreen></iframe>
