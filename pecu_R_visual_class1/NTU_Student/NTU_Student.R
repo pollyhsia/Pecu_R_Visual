@@ -7,12 +7,12 @@ rawData = read.csv('NTU_Student.csv', header = T)
 year = rawData$年度    #按tab鍵可以看見你assign過的變數或內建function 
                        #$只能用在dataframe!!
 
-yearId =rawData[,1]    #同第6行  
+yearId =rawData[,1]    #同第7行  
                        #發現問題：1945-2015應該只有71年,但卻有72個rows...
 
 rawData = rawData[-72,] #把最後一行刪掉
 
-allLine = length(rawData[,1])  #如果不知道有幾個rows，用13~14行的方法
+allLine = length(rawData[,1])  #如果不知道有幾個rows，用15~16行的方法
 rawData = rawData[-allLine,]
 
 barplot(as.matrix(rawData[1,c(-1,-2)]))  #畫出第一年各學院學生人數

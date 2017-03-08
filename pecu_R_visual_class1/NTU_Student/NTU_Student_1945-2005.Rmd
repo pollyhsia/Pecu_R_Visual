@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## 資料介紹
 台大大學部各系1945~2005學生人數變化
 資料來源：台大主計處-- http://acct2015.cc.ntu.edu.tw/
-```{r}
+```{r results = 'hide'}
 library(png)            #可以按tab鍵讓你install的東西叫出來
 library(animation)
 rawData = read.csv('NTU_Student.csv', header = T)
@@ -25,3 +25,4 @@ for(yid in c(1:nrow(rawData))){
 }
 ```
 
+<img src='https://pollyhsia.github.io/Pecu_R_Visual/pecu_R_visual_class1/NTU_Student/students.gif'>
